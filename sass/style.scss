@@ -1,0 +1,226 @@
+@import 'variables';
+//As you can tell I really enjoy animations, I believe they add eye-attracting spice and flair to a page (in moderation)
+html {
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+p {
+  color: $color-white;
+  font: $font-text;
+}
+
+body {
+  font-family: $font-all;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: $color-green;
+  box-sizing: border-box;
+}
+
+.header {
+  height: 100vh;
+//  width: 1080px;
+  background-image: url("../img/ibu-cover.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+}
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.heading-primary {
+  color: $color-main;
+  text-transform: uppercase;
+
+  backface-visibility: hidden;
+  margin-bottom: $size;
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: $size;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.heading-primary-sub {
+  color: $color-white;
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.75rem;
+  animation: moveInRight 1s ease-out;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.forward {
+  position:absolute;
+  top: 0;
+  right: 0;
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all .2s;
+  position: relative;
+  font-size: 1.6rem;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+}
+
+.btn-color {
+  background-color: $color-white;
+  color: $color-green;
+}
+
+.btn::after {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: $size;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+}
+
+.btn-white::after {
+  background: $color-white;
+}
+
+btn:hover::after {
+
+}
+
+.discover-container {
+  height: 100vh;
+//  width: 1080px;
+  background-image: url("../img/purple.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+}
+
+.discover-first {
+  font-family: $font-all;
+  font-size: 48px;
+  color: $color-white;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  letter-spacing: 5px;
+
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.discover-second {
+  font-family: $font-all;
+  color: $color-purple;
+  font-size: 36px;
+  text-align: center;
+  position: relative;
+  letter-spacing: 5px;
+
+}
+
+.spotify-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-container {
+  background-color: $color-about;
+
+}
+
+.contact-container {
+  background-color: $color-grey;
+}
+
+.contact-header {
+  letter-spacing: 2px;
+  color: $color-white;
+  font-size: 28px;
+  text-align: center;
+
+}
+
+.contact-form {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

@@ -1,8 +1,0 @@
-*
-
-!.gitignore
-!*.js
-!libs/*.js
-!libs/**/*.js
-!vendor/*.js
-!vendor/**/*.js
